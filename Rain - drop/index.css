@@ -1,0 +1,109 @@
+html, body {
+    background: #82addb; /* Old browsers */ /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+    background: linear-gradient(to bottom,  #82addb 0%,#ebb2b1 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82addb', endColorstr='#ebb2b1',GradientType=0 ); /* IE6-9 */
+          width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    
+    .ui-layer, #weather-box {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+    }
+    .overcast {
+       width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background:rgba(0,0,0,0);
+        -webkit-animation: its-now-dark 20s infinite;
+                animation: its-now-dark 20s infinite;
+    }
+    
+    @-webkit-keyframes its-now-dark {
+      0% {
+      background:rgba(0,0,0,0);
+      }
+        50% {
+      background:rgba(7, 58, 112,0.6);
+      }
+      100% {
+      background:rgba(0,0,0,0);
+      }
+    }
+    
+    @keyframes its-now-dark {
+      0% {
+      background:rgba(0,0,0,0);
+      }
+        50% {
+      background:rgba(7, 58, 112,0.6);
+      }
+      100% {
+      background:rgba(0,0,0,0);
+      }
+    }
+    
+    #weather-box, #weather-box * {
+      pointer-events: none;
+    }
+    
+    #the-rain {
+              transform: rotate(-20deg);
+    }
+    
+    @-webkit-keyframes its-raining {
+      0% {
+        margin-top: -740px;
+      }
+      100% {
+        margin-top: -500px;
+      }
+    }
+    
+    @keyframes its-raining {
+      0% {
+        margin-top: -740px;
+      }
+      100% {
+        margin-top: -500px;
+      }
+    }
+    .rain-cloud {
+              -webkit-animation: its-raining 0.85s infinite linear;
+                      animation: its-raining 0.85s infinite linear;
+      position: absolute;
+      right: -500px;
+    }
+    .rain-cloud:nth-child(2) {
+              -webkit-animation-duration: 0.765s;
+                      animation-duration: 0.765s;
+      margin-left: 40px;
+    }
+    .rain-cloud:nth-child(3) {
+              -webkit-animation-duration: 0.95s;
+                      animation-duration: 0.95s;
+      margin-left: 75px;
+    }
+    
+    .rain-stream {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0px 50px;
+    }
+    
+    .raindrop {
+      width: 4px;
+      height: 60px;
+      position: relative;
+      margin-top: 60px;
+      opacity: 0.45;
+    }
